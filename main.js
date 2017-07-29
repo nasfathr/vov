@@ -14,7 +14,9 @@ site.get('/favicon.*',function(req,res){
 });
 
 site.get('/',function(req,res){
-	res.render('index.hbs');
+	res.render('index.hbs',{
+		welcome_message: 'Hello World!!'
+	});
 });
 
 site.listen(3003);

@@ -11,6 +11,12 @@ gulp.task('serve', ['sass','scripts','html'], function() {
 
 	var express = gls.new('main.js');
 	express.start();
+	
+	function reloadExpress () {
+		express.start().then(() => {
+			setTimeout(browserSync.reload,500);
+		});	
+	}
 
     browserSync.init({
 		proxy: 'http://localhost:3003',
@@ -24,8 +30,8 @@ gulp.task('serve', ['sass','scripts','html'], function() {
     gulp.watch("../vov/js/*.js", ['scripts']);
     gulp.watch("../vov/index.html", ['html']);
     gulp.watch("../vov/**/*.html").on('change', browserSync.reload);
-	gulp.watch('main.js', express.start.bind(express));
-	gulp.watch('../vov/lib/*.js', express.start.bind(express));
+	gulp.watch('main.js', reloadExpress);
+	gulp.watch('../vov/lib/*.js', reloadExpress);
 });
 
 // Compile sass into CSS & auto-inject into browsers
