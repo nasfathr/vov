@@ -18,7 +18,6 @@ html {
 }
 
 body {
-  @include three-gradient-t-b($bc-violet-dark, $bc-blue-30, $bc-violet-dark);
   margin: 0;
   font-size:$font-size-base;
   font-family: $open-regular;
@@ -28,3 +27,12 @@ body {
   line-height: 1.15;
   color:$bc-white;
 }
+
+
+    h1{
+        font-family: $raleway-bold;
+        font-size: 50px;
+        margin: 0;
+        padding-bottom:15px;
+    }
+

@@ -2765,11 +2765,12 @@ template {
   background-image: none; }
 
 .bc-btn-default {
-  padding: 5px;
+  padding: 5px 26px;
   color: white;
-  font-size: 20x;
-  background: orange;
-  border-radius: 5px; }
+  font-size: 18px;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #ffffff; }
 
 .bc-btn-primary {
   padding: 20px;
@@ -2779,18 +2780,96 @@ template {
   border-radius: 5px; }
 
 .bc-btn-secondory {
-  padding: 5px 40px;
+  padding: 5px 26px;
   color: white;
-  font-size: 14px;
-  background: inherit;
-  border-radius: 50px;
-  /* fallback/image non-cover color */
-  background: #00BBDE;
-  background: -moz-linear-gradient(left, #00BBDE 0%, #00E6DB 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #00BBDE 0%, #00E6DB 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to left, #00BBDE 0%, #00E6DB 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
-  background-repeat: no-repeat; }
+  font-size: 18px;
+  background: #FE9030;
+  border-radius: 50px; }
+
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+* {
+  outline: none; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-size: 17px;
+  font-family: Open-sans-r;
+  -webkit-font-smoothing: subpixel-antialiased;
+  height: 100%;
+  width: 100%;
+  line-height: 1.15;
+  color: #ffffff; }
+
+h1 {
+  font-family: Raleway-b;
+  font-size: 50px;
+  margin: 0;
+  padding-bottom: 15px; }
+
+.section .bc-btn-default:hover, .section .bc-btn-default:active {
+  background: #FE9030;
+  border: 1px solid #FE9030;
+  transition: background-color 0.5s ease; }
+
+#section-1 {
+  background: #38C8CE;
+  height: 300px; }
+  #section-1 p {
+    font-size: 20px; }
+
+.section-wrapper {
+  padding: 75px 0; }
+
+.v-center {
+  text-align: center; }
+
+#section-2 {
+  background: #27618C; }
+  #section-2 h1 {
+    color: #22D9E0; }
+  #section-2 .bc-btn-default {
+    margin-top: 20px;
+    text-align: center;
+    min-width: 200px;
+    margin-bottom: 15px;
+    margin-left: 30px; }
+
+.icon {
+  width: 150px;
+  height: 150px;
+  background: #38C8CE;
+  border-radius: 150px; }
+  .icon .fa {
+    font-size: 90px;
+    margin-left: 31px;
+    text-align: center;
+    margin-top: 26px; }
+  .icon.icon-wrapper {
+    margin-left: 50px; }
+
+#section1 {
+  background: red;
+  transform: skewY(-3deg);
+  border-bottom: 1px solid #eee;
+  margin-top: -55px;
+  padding-bottom: 100px;
+  -webkit-backface-visibility: hidden; }
+
+#section2 {
+  background: orange;
+  transform: skewY(-3deg);
+  border-bottom: 1px solid #eee;
+  margin-top: -55px;
+  padding-bottom: 100px;
+  -webkit-backface-visibility: hidden; }

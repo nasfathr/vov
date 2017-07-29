@@ -20,7 +20,8 @@
 }
 
 .bc-btn-default{
-	@include bc-button(5px, white, 20x, orange, 5px)
+	@include bc-button(5px 26px, white, $font-size-base + 1, transparent, 50px);
+	border: 1px solid $bc-white;
 }
 
 .bc-btn-primary{
@@ -28,6 +29,5 @@
 }
 
 .bc-btn-secondory{
-	@include bc-button($bc-spacer-5 $bc-spacer-40, white, $font-size-small, inherit, 50px);
-	@include two-gradient-l-r($bc-blue-10, $bc-blue-20);
+	@include bc-button(5px 26px, white, $font-size-base + 1, #FE9030, 50px);
 }
