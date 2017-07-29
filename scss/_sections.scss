@@ -136,3 +136,37 @@ ul.bc-list-item{
     display:block;
     margin-top: $bc-spacer-10 + 5;
 }
+
+.prof-left{
+    background: #27618C;
+}
+
+.prof-right{
+    h1{
+        color:$bc-gray;
+        margin-top:30px;
+    }
+
+    
+    .c-gray{
+        a{
+            color: $bc-gray;
+        }
+    }
+
+
+}
+
+.ico-profile{
+
+    text-align: center;
+    .icon-wrapper{
+        font-size: 125px;
+    padding-top: 8px;
+    margin:0;
+    }
+}
+
+.user-name-wrap{
+    margin-top:20px;
+}

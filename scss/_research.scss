@@ -1,0 +1,65 @@
+.research {
+
+	label{
+		 color:$bc-gray;
+	}
+
+	.c-gray {
+		a {
+     color:$bc-gray;
+}
+		}
+	}
+
+	.research{
+		.list-item{
+			margin-top:$bc-spacer-50;
+
+			.item{
+				padding:$bc-spacer-10 + 5 0;
+
+				&:hover, &:active{
+                background: white;
+                transition: background-color 0.5s ease;
+                cursor:pointer;
+                color:$bc-gray;
+        }
+			}
+		}
+	}
+
+
+.prof-left{
+    background: $bc-secondary-color;
+    height:100%;
+}
+
+.prof-right{
+    h1{
+        color:$bc-gray;
+        margin-top:30px;
+    }
+
+
+}
+
+.ico-profile{
+
+    text-align: center;
+    .icon-wrapper{
+        font-size: 125px;
+    padding-top: 8px;
+    margin:0;
+    }
+}
+
+.user-name-wrap{
+    margin-top:20px;
+}
+
+
+.bc-button-wrap {
+    text-align: right;
+}
+
+
