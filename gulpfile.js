@@ -9,7 +9,7 @@ var gls = require('gulp-live-server');
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass','scripts','html'], function() {
 
-	var express = = gls.new('main.js');
+	var express = gls.new('main.js');
 	express.start();
 
     browserSync.init({
@@ -25,6 +25,8 @@ gulp.task('serve', ['sass','scripts','html'], function() {
     gulp.watch("../vov/index.html", ['html']);
 	gulp.watch("../vov/**/*.hbs",['hbs']);
     gulp.watch("../vov/**/*.html").on('change', browserSync.reload);
+	gulp.watch('main.js', express.start.bind(express));
+	gulp.watch('../vov/lib/*.js', express.start.bind(express));
 });
 
 // Compile sass into CSS & auto-inject into browsers
