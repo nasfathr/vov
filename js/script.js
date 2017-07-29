@@ -17,4 +17,7 @@ $(document).ready(function () {
 // });
 
 
+	$('.signup-btn').on('click',function(){
+		window.location = '/login?role=' + $(this).data('usertype');
+	});
 });

@@ -65,7 +65,10 @@
                             <div class="icon icon-wrapper">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
-                            <div class="bc-btn bc-btn-default">
+                            <div class="bc-btn bc-btn-default"
+								data-toggle="modal" 
+								data-target="#research-modal"
+							>
                                 Research
                             </div>
                             <p class="v-center">
@@ -78,7 +81,10 @@
                             <div class="icon icon-wrapper">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
-                            <div class="bc-btn bc-btn-default">
+                            <div class="bc-btn bc-btn-default" 
+								data-toggle="modal" 
+								data-target="#donate-modal"
+							>
                                 Donate
                             </div>
                             <p class="v-center">
@@ -94,5 +100,8 @@
         <h1 class="v-center">What’s happening?</h1>
         <a href="#section-1" class="js-anchor-link">Back to section 1</a>
     </section>
+	
+	{{> signup role="donate" title="Sign up and donate" }}
+	{{> signup role="research" title="Sign up and share your work" }}
 </body>
 </html>
