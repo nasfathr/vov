@@ -17,6 +17,8 @@ $bc-color-10: #1e1a3e; //vilot-blue-minus
 $bc-color-20: #0A2A4B; // vilot-blue-lightned
 $bc-color-30: #39C56A; //light-green
 
+$bc-gray:#484848; 
+
 
 // 2-color-gradient-top-to-bottom
 @mixin two-gradient-t-b($color1, $color2) {
@@ -64,4 +66,9 @@ $bc-color-30: #39C56A; //light-green
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181d45', endColorstr='#181d45',GradientType=0 );
   
   background-repeat: no-repeat;
+}
+
+
+.c-gray{
+  color: $bc-gray;
 }

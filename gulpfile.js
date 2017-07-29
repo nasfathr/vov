@@ -7,7 +7,7 @@ var handlebars = require('gulp-handlebars');
 var gls = require('gulp-live-server');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass','scripts','html','fonts'], function() {
+gulp.task('serve', ['sass','scripts','html','fonts','images'], function() {
 
 	var express = gls.new('main.js');
 	express.start();
@@ -21,8 +21,8 @@ gulp.task('serve', ['sass','scripts','html','fonts'], function() {
     browserSync.init({
 		proxy: 'http://localhost:3003',
 		serveStatic: [{
-			route: ['/js', '/css', '/fonts'],
-			dir: ['./dist/js','./dist/css', './dist/fonts']
+			route: ['/js', '/css', '/fonts', '/images'],
+			dir: ['./dist/js','./dist/css', './dist/fonts', './dist/images']
 		}]
 	});
 
@@ -67,6 +67,12 @@ gulp.task('html', () =>
 gulp.task('fonts', () =>
     gulp.src('../vov/fonts/**')
         .pipe(gulp.dest('dist/fonts'))
+        .pipe(browserSync.stream())
+);
+
+gulp.task('images', () =>
+    gulp.src('../vov/images/**')
+        .pipe(gulp.dest('dist/images'))
         .pipe(browserSync.stream())
 );
 
