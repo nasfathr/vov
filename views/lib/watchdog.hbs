@@ -2,8 +2,15 @@
 	{{> input text="Full Name" id="name" name="name" }}
 	{{> input text="ID" id="id" name="id" }}
 	{{> input text="Name of Organisation" id="organisation" name="organisation" }}
-	{{> input text="Gender" id="gender" name="gender" }}
-	
+	<div class="form-group">
+		<label for="{{ role }}-gender">Gender</label>
+		<select class="custom-select form-control" id="{{ role }}-gender">
+		  <option selected></option>
+		  <option value="male">Male</option>
+		  <option value="female">Female</option>
+		  <option value="unknown">Prefer not to say</option>
+		</select>
+	</div>
 </div>
 <div class="login-inputs pull-right">
 	{{> input text="Email" id="email" name="email" }}
