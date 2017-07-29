@@ -25,9 +25,20 @@
 }
 
 .bc-btn-primary{
-	@include bc-button(20px, white, 20x, orange, 5px)
+	@include bc-button(5px 26px, white, $font-size-base + 1, $bc-orange, 50px);
+	border: 1px solid $bc-white;
 }
 
 .bc-btn-secondory{
 	@include bc-button(5px 26px, white, $font-size-base + 1, #FE9030, 50px);
+}
+
+.bc-btn-facebook{
+	@include bc-button(5px 26px, white, $font-size-base + 1, #27618C, 50px);
+	border: 1px solid $bc-white;
+}
+
+.bc-btn-google{
+	@include bc-button(5px 26px, white, $font-size-base + 1, #D75A5A, 50px);
+	border: 1px solid $bc-white;
 }

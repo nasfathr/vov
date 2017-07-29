@@ -1,4 +1,6 @@
 var $ = require('jquery');
+jQuery = $;
+var bootstrap = require('bootstrap');
 
 $(document).ready(function () {
 // /*
@@ -45,4 +47,9 @@ $(function() {
    return false;
  });
 });
+
+	$('.signup-btn').on('click',function(){
+		window.location = '/login?role=' + $(this).data('usertype');
+	});
+	
 });

@@ -8,8 +8,11 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 
 	<script type="text/javascript" src="js/script.js"></script>
+<<<<<<< HEAD
 	<script async src="//jsfiddle.net/43bszgwn/embed/"></script>
 
+=======
+>>>>>>> b3be451328ec664febda1c635a807e5a59954431
 </head>
 <body>
 	 <!-- 	<ul id="nav">
@@ -47,7 +50,10 @@
                             <div class="icon icon-wrapper">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
-                            <div class="bc-btn bc-btn-default">
+                            <div class="bc-btn bc-btn-default"
+								data-toggle="modal" 
+								data-target="#report-modal"
+							>
                                 WHISTLEBLOWER
                             </div>
                             <p class="v-center">
@@ -60,7 +66,10 @@
                             <div class="icon icon-wrapper">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
-                            <div class="bc-btn bc-btn-default">
+                            <div class="bc-btn bc-btn-default"
+								data-toggle="modal" 
+								data-target="#watch-modal"
+							>
                                 WATCH DOG
                             </div>
                             <p class="v-center">
@@ -73,7 +82,10 @@
                             <div class="icon icon-wrapper">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
-                            <div class="bc-btn bc-btn-default">
+                            <div class="bc-btn bc-btn-default"
+								data-toggle="modal" 
+								data-target="#research-modal"
+							>
                                 Research
                             </div>
                             <p class="v-center">
@@ -86,7 +98,10 @@
                             <div class="icon icon-wrapper">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
-                            <div class="bc-btn bc-btn-default">
+                            <div class="bc-btn bc-btn-default" 
+								data-toggle="modal" 
+								data-target="#donate-modal"
+							>
                                 Donate
                             </div>
                             <p class="v-center">
@@ -168,5 +183,19 @@ Minister of Police Fikile Mbalula said on Friday evening that the woman had been
         </div>
    	</div>
     </section>
+	
+	{{> report }}
+	{{> signup 
+		role="donate" title="Sign up and donate" 
+		form="donor-researcher"
+	}}
+	{{> signup 
+		role="research" title="Sign up and share your work" 
+		form="donor-researcher"
+	}}
+	{{> signup 
+		role="watch" title="Be a Watchdog" 
+		form="watchdog"
+	}}
 </body>
 </html>
