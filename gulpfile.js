@@ -4,27 +4,34 @@ var sass        = require('gulp-sass');
 const template = require('gulp-template');
 var browserify = require('gulp-browserify');
 var handlebars = require('gulp-handlebars');
+var gls = require('gulp-live-server');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass','scripts','hbs','html'], function() {
+gulp.task('serve', ['sass','scripts','html'], function() {
+
+	var express = gls.new('main.js');
+	express.start();
+	
+	function reloadExpress () {
+		express.start().then(() => {
+			setTimeout(browserSync.reload,500);
+		});	
+	}
 
     browserSync.init({
-        server: "../vov/dist"
-    });
+		proxy: 'http://localhost:3003',
+		serveStatic: [{
+			route: ['/js', '/css'],
+			dir: ['./dist/js','./dist/css']
+		}]
+	});
 
     gulp.watch("../vov/scss/**/*.scss", ['sass']);
     gulp.watch("../vov/js/*.js", ['scripts']);
     gulp.watch("../vov/index.html", ['html']);
-	gulp.watch("../vov/**/*.hbs",['hbs']);
     gulp.watch("../vov/**/*.html").on('change', browserSync.reload);
-});
-
-// Compile hbs
-gulp.task('hbs', () => {
-	return gulp.src("../vov/**/*.hbs")
-		.pipe(handlebars())
-		.pipe(gulp.dest("../vov/dist/hbs"))
-		.pipe(browserSync.stream());
+	gulp.watch('main.js', reloadExpress);
+	gulp.watch('../vov/lib/*.js', reloadExpress);
 });
 
 // Compile sass into CSS & auto-inject into browsers
