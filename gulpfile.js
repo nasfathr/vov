@@ -7,7 +7,7 @@ var handlebars = require('gulp-handlebars');
 var gls = require('gulp-live-server');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass','scripts','html'], function() {
+gulp.task('serve', ['sass','scripts','html','fonts'], function() {
 
 	var express = gls.new('main.js');
 	express.start();
@@ -21,8 +21,8 @@ gulp.task('serve', ['sass','scripts','html'], function() {
     browserSync.init({
 		proxy: 'http://localhost:3003',
 		serveStatic: [{
-			route: ['/js', '/css'],
-			dir: ['./dist/js','./dist/css']
+			route: ['/js', '/css', '/fonts'],
+			dir: ['./dist/js','./dist/css', './dist/fonts']
 		}]
 	});
 
@@ -32,6 +32,7 @@ gulp.task('serve', ['sass','scripts','html'], function() {
     gulp.watch("../vov/**/*.html").on('change', browserSync.reload);
 	gulp.watch('main.js', reloadExpress);
 	gulp.watch('../vov/lib/*.js', reloadExpress);
+    gulp.watch('../vov/views/**/*.hbs', reloadExpress);
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -60,6 +61,12 @@ gulp.task('html', () =>
     gulp.src('../vov/index.html')
         .pipe(template({name: 'vov'}))
         .pipe(gulp.dest('dist'))
+        .pipe(browserSync.stream())
+);
+
+gulp.task('fonts', () =>
+    gulp.src('../vov/fonts/**')
+        .pipe(gulp.dest('dist/fonts'))
         .pipe(browserSync.stream())
 );
 
