@@ -52,7 +52,10 @@
                             <div class="icon icon-wrapper">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
-                            <div class="bc-btn bc-btn-default">
+                            <div class="bc-btn bc-btn-default"
+								data-toggle="modal" 
+								data-target="#watch-modal"
+							>
                                 WATCH DOG
                             </div>
                             <p class="v-center">
@@ -101,7 +104,17 @@
         <a href="#section-1" class="js-anchor-link">Back to section 1</a>
     </section>
 	
-	{{> signup role="donate" title="Sign up and donate" }}
-	{{> signup role="research" title="Sign up and share your work" }}
+	{{> signup 
+		role="donate" title="Sign up and donate" 
+		form="donor-researcher"
+	}}
+	{{> signup 
+		role="research" title="Sign up and share your work" 
+		form="donor-researcher"
+	}}
+	{{> signup 
+		role="watch" title="Be a Watchdog" 
+		form="watchdog"
+	}}
 </body>
 </html>

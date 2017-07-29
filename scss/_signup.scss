@@ -13,7 +13,9 @@
 	}
 	label, input,
 	.login-inputs,
-	.local-signup {
+	.local-signup,
+	.google-signup,
+	.fb-signup {
 		width: 324px;
 	}
 	.local-signup {
@@ -21,7 +23,6 @@
 	}
 	.google-signup,
 	.fb-signup {
-		width: 295px;
 		height: 48px;
 	}
 	.login-inputs {
@@ -31,5 +32,8 @@
 	}
 	.login-buttons {
 		text-align: center;
+	}
+	.modal-dialog {
+		width: 660px;
 	}
 }
