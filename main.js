@@ -38,7 +38,9 @@ site.get('/watch', (req,res) => {
 			session: req.session
 		});
 	}
-	res.status(401).send('Unauthorized');
+	else {
+		res.status(401).send('Unauthorized');
+	}
 });
 
 site.get('/research', (req,res) => {
@@ -48,7 +50,9 @@ site.get('/research', (req,res) => {
 			session: req.session
 		});
 	}
-	res.status(401).send('Unauthorized');
+	else {
+		res.status(401).send('Unauthorized');
+	}
 });
 
 site.get('/donate', (req,res) => {
@@ -58,7 +62,9 @@ site.get('/donate', (req,res) => {
 			session: req.session
 		});
 	}
-	res.status(401).send('Unauthorized');
+	else {
+		res.status(401).send('Unauthorized');
+	}
 });
 
 // To fake register request /register?role=watch or research or donate
