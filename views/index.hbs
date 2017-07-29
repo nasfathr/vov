@@ -15,12 +15,7 @@
 	  <li><a href="#section-2" class="js-anchor-link">Section 2</a></li>
 	  <li><a href="#section-3" class="js-anchor-link">Section 3</a></li>
 	</ul> -->
-	<header>
-		<div class="v-language pull-right">
-			<a href="#">English</a> |
-			<a href="#">Bahasa Malaysia</a>
-		</div>
-	</header>
+	{{> header }}
     <section id="section-1" class="section">
         <div class="container">
             <div class="row">
@@ -179,6 +174,7 @@ Minister of Police Fikile Mbalula said on Friday evening that the woman had been
    	</div>
     </section>
 	
+	{{> login }}
 	{{> report }}
 	{{> signup 
 		role="donate" title="Sign up and donate" 

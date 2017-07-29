@@ -1,31 +1,10 @@
-.form-control {
-	border-radius: 10px;
-}
-
-.report, .signup, .login {
-	button {
-		margin-bottom: 3px;
-	}
-}
-
-.report {
+.login {
 	background-color: #F9F9F9;
 	color: #333333;
 	h1 {
 		margin-top: 30px;
 		font-family: $raleway-bold;
-	}
-	.modal-header {
-		background-color: #38C8CE;
-		color: #FFF;
-		height: 190px;
-	}
-	.encouragement {
-		text-align: center;
-		width: 510px;
-		margin-left:auto;
-		margin-right:auto;
-		font-size: 15px;
+		color: #27618C;
 	}
 	label {
 		display: block;
@@ -34,8 +13,14 @@
 	}
 	label, input,
 	.login-inputs,
-	.report-btn {
+	.login-btn,
+	.fb-signup,
+	.google-signup {
 		width: 324px;
+	}
+	.google-signup,
+	.fb-signup {
+		height: 48px;
 	}
 	.local-signup {
 		height: 32px;
@@ -49,5 +34,8 @@
 	select {
 		background-color: #27618C;
 		color: #FFF;
+	}
+	.login-buttons {
+		margin-top: 30px;
 	}
 }
