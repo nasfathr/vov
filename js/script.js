@@ -1,4 +1,6 @@
 var $ = require('jquery');
+jQuery = $;
+var bootstrap = require('bootstrap');
 
 $(document).ready(function () {
 // /*
