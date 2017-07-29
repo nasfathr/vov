@@ -16,14 +16,13 @@ gulp.task('serve', ['sass','scripts','html'], function() {
 		proxy: 'http://localhost:3003',
 		serveStatic: [{
 			route: ['/js', '/css'],
-			dir: '../vov/dist'
+			dir: ['./dist/js','./dist/css']
 		}]
 	});
 
     gulp.watch("../vov/scss/**/*.scss", ['sass']);
     gulp.watch("../vov/js/*.js", ['scripts']);
     gulp.watch("../vov/index.html", ['html']);
-	gulp.watch("../vov/**/*.hbs",['hbs']);
     gulp.watch("../vov/**/*.html").on('change', browserSync.reload);
 	gulp.watch('main.js', express.start.bind(express));
 	gulp.watch('../vov/lib/*.js', express.start.bind(express));
