@@ -10,12 +10,12 @@
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+	{{> header }}
 	 <!-- 	<ul id="nav">
 	  <li><a href="#section-1" class="js-anchor-link">Section 1</a></li>
 	  <li><a href="#section-2" class="js-anchor-link">Section 2</a></li>
 	  <li><a href="#section-3" class="js-anchor-link">Section 3</a></li>
 	</ul> -->
-	{{> header }}
     <section id="section-1" class="section">
         <div class="container">
             <div class="row">
@@ -30,79 +30,81 @@
             </div>
         </div>
     </section>
-    <section id="section-2" class="section">
-        <div class="section-wrapper">
-            <h1 class="v-center">What’s your role?</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="sectors">
-                            <div class="icon icon-wrapper">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </div>
-                            <div class="bc-btn bc-btn-default"
-								data-toggle="modal" 
-								data-target="#report-modal"
-							>
-                                WHISTLEBLOWER
-                            </div>
-                            <p class="v-center">
-                            	Witnessed something and want to report here
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="sectors">
-                            <div class="icon icon-wrapper">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </div>
-                            <div class="bc-btn bc-btn-default"
-								data-toggle="modal" 
-								data-target="#watch-modal"
-							>
-                                WATCH DOG
-                            </div>
-                            <p class="v-center">
-                            	Are you part of an non for profit organisation that battles agaisnt human traficking?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="sectors">
-                            <div class="icon icon-wrapper">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </div>
-                            <div class="bc-btn bc-btn-default"
-								data-toggle="modal" 
-								data-target="#research-modal"
-							>
-                                Research
-                            </div>
-                            <p class="v-center">
-                            	Upload and share your studies for human trafficking to help watchdogs fight the bad guys.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="sectors">
-                            <div class="icon icon-wrapper">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </div>
-                            <div class="bc-btn bc-btn-default" 
-								data-toggle="modal" 
-								data-target="#donate-modal"
-							>
-                                Donate
-                            </div>
-                            <p class="v-center">
-                            	You can make a difference by donating to continue assist in solving trafficking cases.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+	{{#unless session.loggedIn }}
+	    <section id="section-2" class="section">
+	        <div class="section-wrapper">
+	            <h1 class="v-center">What’s your role?</h1>
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-3">
+	                        <div class="sectors">
+	                            <div class="icon icon-wrapper">
+	                                <i class="fa fa-eye" aria-hidden="true"></i>
+	                            </div>
+	                            <div class="bc-btn bc-btn-default"
+									data-toggle="modal" 
+									data-target="#report-modal"
+								>
+	                                WHISTLEBLOWER
+	                            </div>
+	                            <p class="v-center">
+	                            	Witnessed something and want to report here
+	                            </p>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-3">
+	                        <div class="sectors">
+	                            <div class="icon icon-wrapper">
+	                                <i class="fa fa-eye" aria-hidden="true"></i>
+	                            </div>
+	                            <div class="bc-btn bc-btn-default"
+									data-toggle="modal" 
+									data-target="#watch-modal"
+								>
+	                                WATCH DOG
+	                            </div>
+	                            <p class="v-center">
+	                            	Are you part of an non for profit organisation that battles agaisnt human traficking?
+	                            </p>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-3">
+	                        <div class="sectors">
+	                            <div class="icon icon-wrapper">
+	                                <i class="fa fa-eye" aria-hidden="true"></i>
+	                            </div>
+	                            <div class="bc-btn bc-btn-default"
+									data-toggle="modal" 
+									data-target="#research-modal"
+								>
+	                                Research
+	                            </div>
+	                            <p class="v-center">
+	                            	Upload and share your studies for human trafficking to help watchdogs fight the bad guys.
+	                            </p>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-3">
+	                        <div class="sectors">
+	                            <div class="icon icon-wrapper">
+	                                <i class="fa fa-eye" aria-hidden="true"></i>
+	                            </div>
+	                            <div class="bc-btn bc-btn-default" 
+									data-toggle="modal" 
+									data-target="#donate-modal"
+								>
+	                                Donate
+	                            </div>
+	                            <p class="v-center">
+	                            	You can make a difference by donating to continue assist in solving trafficking cases.
+	                            </p>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	{{/unless}}
     <section id="section-3" class="section">
         <h1 class="v-center">What’s happening?</h1>
         <div class="container">
@@ -133,7 +135,7 @@
         	</div>
         </div>
     </section>
-   <section id="section-4" class="section">
+	<section id="section-4" class="section">
    	<div class="section-wrapper">
    		          <h1 class="v-center">Current Issues</h1>
           <div class="container">

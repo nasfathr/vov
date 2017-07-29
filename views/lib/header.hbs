@@ -4,11 +4,17 @@
 		<a href="#">Bahasa Malaysia</a>
 	</div>
 	<div class="v-language login-button pull-right">
-		<a href="#"
-			data-toggle="modal" 
-			data-target="#login-modal"
-		>
-			Login
-		</a>
+		{{#if session.loggedIn }}
+			<a href="/logout">
+				Logout
+			</a>
+		{{else}}
+			<a href="#"
+				data-toggle="modal" 
+				data-target="#login-modal"
+			>
+				Login
+			</a>
+		{{/if}}
 	</div>
 </header>

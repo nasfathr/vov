@@ -28,6 +28,10 @@
 
 #section-2{
     background: $bc-secondary-color;
+	
+	.section-wrapper {
+		padding-bottom: 0px;
+	}
 
     h1{
         color: $bc-blue-10;
@@ -45,6 +49,7 @@
 
 #section-3{
     background: $bc-secondary-color;
+	padding-top: $bc-spacer-70 + 5;
 
     h1{
         color: $bc-primary-color;
