@@ -31,12 +31,46 @@ site.get('/', (req,res) => {
 	});
 });
 
-site.post('/register', (req,res) => {
-	req.session.loggedIn = 1;
+site.get('/watch', (req,res) => {
+	if (req.session.loggedIn) {
+		res.render('watch.hbs',{
+			welcome_message: 'Hello World!!',
+			session: req.session
+		});
+	}
+	res.status(401).send('Unauthorized');
 });
 
-site.post('/login', (req,res) => {
+site.get('/research', (req,res) => {
+	if (req.session.loggedIn) {
+		res.render('research.hbs',{
+			welcome_message: 'Hello World!!',
+			session: req.session
+		});
+	}
+	res.status(401).send('Unauthorized');
+});
+
+site.get('/donate', (req,res) => {
+	if (req.session.loggedIn) {
+		res.render('donate.hbs',{
+			welcome_message: 'Hello World!!',
+			session: req.session
+		});
+	}
+	res.status(401).send('Unauthorized');
+});
+
+// To fake register request /register?role=watch or research or donate
+site.get('/register', (req,res) => {
 	req.session.loggedIn = 1;
+	res.redirect(req.query.role);
+});
+
+// To fake login request /login?role=watch or research or donate
+site.get('/login', (req,res) => {
+	req.session.loggedIn = 1;
+	res.redirect(req.query.role);
 });
 
 site.get('/logout', (req,res) => {
