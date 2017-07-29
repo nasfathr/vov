@@ -31,9 +31,11 @@
   "dependencies": {
     "express": "^4.15.3",
     "express-hbs": "^1.0.4",
+    "express-session": "^1.15.4",
     "gulp-live-server": "0.0.31",
     "jquery": "^3.2.1",
-    "lowdb": "^0.16.2"
+    "lowdb": "^0.16.2",
+    "session-file-store": "^1.1.1"
   },
   "browserify-shim": {
     "jquery": "$"
