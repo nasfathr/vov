@@ -3,18 +3,30 @@
 		<a href="#">English</a> |
 		<a href="#">Bahasa Malaysia</a>
 	</div>
-	<div class="v-language login-button pull-right">
-		{{#if session.loggedIn }}
+	
+	{{#if session.loggedIn }}
+		<div class="v-language login-button pull-right">
+			<a href="#"
+				class="report-link"
+				data-toggle="modal" 
+				data-target="#report-modal"
+			>
+				Report
+			</a>
+		</div>
+		<div class="v-language login-button pull-right">
 			<a href="/logout">
 				Logout
 			</a>
-		{{else}}
+		</div>
+	{{else}}
+		<div class="v-language login-button pull-right">
 			<a href="#"
 				data-toggle="modal" 
 				data-target="#login-modal"
 			>
 				Login
 			</a>
-		{{/if}}
-	</div>
+		</div>
+	{{/if}}
 </header>
