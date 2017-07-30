@@ -22,23 +22,28 @@
 .bc-btn-default{
 	@include bc-button(5px 26px, white, $font-size-base + 1, transparent, 50px);
 	border: 1px solid $bc-white;
+	 cursor: pointer;
 }
 
 .bc-btn-primary{
 	@include bc-button(5px 26px, white, $font-size-base + 1, $bc-orange, 50px);
 	border-width:0px;
+	 cursor: pointer;
 }
 
 .bc-btn-secondory{
 	@include bc-button(5px 26px, white, $font-size-base + 1, #FE9030, 50px);
+	 cursor: pointer;
 }
 
 .bc-btn-facebook{
 	@include bc-button(5px 26px, white, $font-size-base + 1, #27618C, 50px);
 	border: 1px solid $bc-white;
+	 cursor: pointer;
 }
 
 .bc-btn-google{
 	@include bc-button(5px 26px, white, $font-size-base + 1, #D75A5A, 50px);
 	border: 1px solid $bc-white;
+	 cursor: pointer;
 }
