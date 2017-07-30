@@ -26,6 +26,7 @@
 
 .bc-btn-primary{
 	@include bc-button(5px 26px, white, $font-size-base + 1, $bc-orange, 50px);
+	border-width:0px;
 }
 
 .bc-btn-secondory{
