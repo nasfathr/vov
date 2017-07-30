@@ -47,4 +47,8 @@ $(document).ready(function () {
 	});
 
 	login.init();
+	
+	$('#make-donation').on('click',function(){
+		window.location = '/donate';
+	});
 });
