@@ -19,7 +19,12 @@
     <section id="section-1" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-3 col-md-6">
+            	<div class="col-md-3">
+            		<div class="logo-wrapper">
+            			<img id="logo" class="v-logo" src="images/logo.svg" alt="whistleblowers">
+            		</div>
+            	</div>
+                <div class="col-md-6">
                     <div class="section-wrapper">
                         <h1 class="v-center">Whistle Blower</h1>
                         <p class="v-pera v-center">
@@ -31,80 +36,80 @@
         </div>
     </section>
 	{{#unless session.loggedIn }}
-	    <section id="section-2" class="section">
-	        <div class="section-wrapper">
-	            <h1 class="v-center">What’s your role?</h1>
-	            <div class="container">
-	                <div class="row">
-	                    <div class="col-md-3">
-	                        <div class="sectors">
-	                            <div class="icon icon-wrapper">
-	                                <i class="fa fa-eye" aria-hidden="true"></i>
-	                            </div>
-	                            <div class="bc-btn bc-btn-default"
-									data-toggle="modal" 
-									data-target="#report-modal"
-								>
-	                                WHISTLEBLOWER
-	                            </div>
-	                            <p class="v-center">
-	                            	Witnessed something and want to report here
-	                            </p>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-3">
-	                        <div class="sectors">
-	                            <div class="icon icon-wrapper">
-	                                <i class="fa fa-eye" aria-hidden="true"></i>
-	                            </div>
-	                            <div class="bc-btn bc-btn-default"
-									data-toggle="modal" 
-									data-target="#watch-modal"
-								>
-	                                WATCH DOG
-	                            </div>
-	                            <p class="v-center">
-	                            	Are you part of an non for profit organisation that battles agaisnt human traficking?
-	                            </p>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-3">
-	                        <div class="sectors">
-	                            <div class="icon icon-wrapper">
-	                                <i class="fa fa-eye" aria-hidden="true"></i>
-	                            </div>
-	                            <div class="bc-btn bc-btn-default"
-									data-toggle="modal" 
-									data-target="#research-modal"
-								>
-	                                Research
-	                            </div>
-	                            <p class="v-center">
-	                            	Upload and share your studies for human trafficking to help watchdogs fight the bad guys.
-	                            </p>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-3">
-	                        <div class="sectors">
-	                            <div class="icon icon-wrapper">
-	                                <i class="fa fa-eye" aria-hidden="true"></i>
-	                            </div>
-	                            <div class="bc-btn bc-btn-default" 
-									data-toggle="modal" 
-									data-target="#donate-modal"
-								>
-	                                Donate
-	                            </div>
-	                            <p class="v-center">
-	                            	You can make a difference by donating to continue assist in solving trafficking cases.
-	                            </p>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </section>
-	{{/unless}}
+    <section id="section-2" class="section">
+        <div class="section-wrapper">
+            <h1 class="v-center">What’s your role?</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="sectors">
+                            <div class="icon icon-wrapper">
+                                <img id="sectors" class="whistleblowers" src="images/1.svg" alt="whistleblowers">
+                            </div>
+                            <div class="bc-btn bc-btn-default"
+								data-toggle="modal" 
+								data-target="#report-modal"
+							>
+                                WHISTLEBLOWER
+                            </div>
+                            <p class="v-center">
+                            	Witnessed something and want to report here
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sectors">
+                            <div class="icon icon-wrapper">
+                                 <img id="sectors" class="watchdog" src="images/2.svg" alt="watchdog">
+                            </div>
+                            <div class="bc-btn bc-btn-default"
+								data-toggle="modal" 
+								data-target="#watch-modal"
+							>
+                                WATCH DOG
+                            </div>
+                            <p class="v-center">
+                            	Are you part of an non for profit organisation that battles agaisnt human traficking?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sectors">
+                            <div class="icon icon-wrapper">
+                                <img id="sectors" class="research" src="images/3.svg" alt="Research">
+                            </div>
+                            <div class="bc-btn bc-btn-default"
+								data-toggle="modal" 
+								data-target="#research-modal"
+							>
+                                Research
+                            </div>
+                            <p class="v-center">
+                            	Upload and share your studies for human trafficking to help watchdogs fight the bad guys.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sectors">
+                            <div class="icon icon-wrapper">
+                                <img id="sectors" class="donate" src="images/4.svg" alt="Donate">
+                            </div>
+                            <div class="bc-btn bc-btn-default" 
+								data-toggle="modal" 
+								data-target="#donate-modal"
+							>
+                                Donate
+                            </div>
+                            <p class="v-center">
+                            	You can make a difference by donating to continue assist in solving trafficking cases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/unless}}
     <section id="section-3" class="section">
         <h1 class="v-center">What’s happening?</h1>
         <div class="container">
@@ -163,9 +168,14 @@ Minister of Police Fikile Mbalula said on Friday evening that the woman had been
         		</div>
         		<div class="col-md-4">
         			<div class="news-wrap">
-        				<h3>News Headline</h3>
+        				<h3>Free State woman saved from sex traffickers and organ harvesters in Malaysia</h3>
         			<p>
-        				This is the news paragraph something is happening in this area. There has been a suspected activity of child labor in this area and its not right.
+        				A joint operation between the South African Police Service, the Hawks and Interpol resulted in the rescue of a number female victims from a suspected global human trafficking syndicate.
+
+A 24-year-old South African woman was among those rescued on Friday from the suspected syndicate in Malaysia.
+
+Police Minister Fikile Mbalula said the Bloemfontein resident was lured by a modelling competition online.
+
 						<a class="c-gray read-more" href="">Read more..</a>
         			</p>
         			</div>

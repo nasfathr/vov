@@ -141,3 +141,11 @@ ul.bc-list-item{
     display:block;
     margin-top: $bc-spacer-10 + 5;
 }
+
+.logo-wrapper {
+    margin-top: 90px;
+
+    .v-logo{
+        width:250px;
+    }
+}
