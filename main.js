@@ -3,6 +3,7 @@ var hbs = require('express-hbs');
 var lowdb = require('lowdb');
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
+var registerLoginRoutes = require('./lib/routes/login');
  
 var site = express();
 
@@ -25,16 +26,18 @@ site.use(session({
 }));
 
 site.get('/', (req,res) => {
+	var loginFail = req.session.loginFail;
+
+	req.session.loginFail = 0;
 	res.render('index.hbs',{
-		welcome_message: 'Hello World!!',
-		session: req.session
+		session: req.session,
+		loginFail: loginFail
 	});
 });
 
 site.get('/watch', (req,res) => {
 	if (req.session.loggedIn) {
 		res.render('watch.hbs',{
-			welcome_message: 'Hello World!!',
 			session: req.session
 		});
 	}
@@ -46,7 +49,6 @@ site.get('/watch', (req,res) => {
 site.get('/research', (req,res) => {
 	if (req.session.loggedIn) {
 		res.render('research.hbs',{
-			welcome_message: 'Hello World!!',
 			session: req.session
 		});
 	}
@@ -58,7 +60,6 @@ site.get('/research', (req,res) => {
 site.get('/donate', (req,res) => {
 	if (req.session.loggedIn) {
 		res.render('donate.hbs',{
-			welcome_message: 'Hello World!!',
 			session: req.session
 		});
 	}
@@ -67,22 +68,6 @@ site.get('/donate', (req,res) => {
 	}
 });
 
-// To fake register request /register?role=watch or research or donate
-site.get('/register', (req,res) => {
-	req.session.loggedIn = 1;
-	res.redirect(req.query.role);
-});
-
-// To fake login request /login?role=watch or research or donate
-site.get('/login', (req,res) => {
-	req.session.loggedIn = 1;
-	res.redirect(req.query.role);
-});
-
-site.get('/logout', (req,res) => {
-	req.session.destroy(()=>{
-		res.redirect('/');
-	});
-});
+registerLoginRoutes(site);
 
 site.listen(3003);

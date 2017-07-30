@@ -1,0 +1,41 @@
+{
+	"users": [
+		{
+			"name": "fb-user",
+			"username": "fb-user",
+			"email": "fb-user@gmail.com",
+			"role": "watchdog",
+			"loginType": "facebook",
+			"phone": "0123456789",
+			"organisation": null,
+			"id": 0,
+			"gender": "male",
+			"pass": "123"
+		},
+		{
+			"name": "google-user",
+			"username": "google-user",
+			"email": "fb-user@gmail.com",
+			"role": "donor",
+			"loginType": "google",
+			"phone": "0123123123",
+			"organisation": null,
+			"id": 1,
+			"gender": "female",
+			"pass": "123"
+		},
+		{
+			"name": "test",
+			"username": "test",
+			"email": "testing@gmail.com",
+			"role": "watchdog",
+			"loginType": "local",
+			"phone": "",
+			"organisation": null,
+			"id": 2,
+			"gender": "male",
+			"pass": "test"
+		}
+	],
+	"reports": []
+}

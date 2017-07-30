@@ -1,6 +1,7 @@
 var $ = require('jquery');
 jQuery = $;
 var bootstrap = require('bootstrap');
+var login = require('./login');
 
 $(document).ready(function () {
 // /*
@@ -45,11 +46,5 @@ $(document).ready(function () {
 		return false;
 	});
 
-	$('.signup-btn').on('click',function(){
-		window.location = '/register?role=' + $(this).data('usertype');
-	});
-	
-	$('.login-btn').on('click',function(){
-		window.location = '/login?role=/';
-	});
+	login.init();
 });
