@@ -10,17 +10,12 @@
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+	{{> header }}
 	 <!-- 	<ul id="nav">
 	  <li><a href="#section-1" class="js-anchor-link">Section 1</a></li>
 	  <li><a href="#section-2" class="js-anchor-link">Section 2</a></li>
 	  <li><a href="#section-3" class="js-anchor-link">Section 3</a></li>
 	</ul> -->
-	<header>
-		<div class="v-language pull-right">
-			<a href="#">English</a> |
-			<a href="#">Bahasa Malaysia</a>
-		</div>
-	</header>
     <section id="section-1" class="section">
         <div class="container">
             <div class="row">
@@ -40,6 +35,8 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
+	{{#unless session.loggedIn }}
     <section id="section-2" class="section">
         <div class="section-wrapper">
             <h1 class="v-center">What’s your role?</h1>
@@ -113,6 +110,7 @@
             </div>
         </div>
     </section>
+    {{/unless}}
     <section id="section-3" class="section">
         <h1 class="v-center">What’s happening?</h1>
         <div class="container">
@@ -143,7 +141,7 @@
         	</div>
         </div>
     </section>
-   <section id="section-4" class="section">
+	<section id="section-4" class="section">
    	<div class="section-wrapper">
    		          <h1 class="v-center">Current Issues</h1>
           <div class="container">
@@ -189,6 +187,7 @@ Police Minister Fikile Mbalula said the Bloemfontein resident was lured by a mod
    	</div>
     </section>
 	
+	{{> login }}
 	{{> report }}
 	{{> signup 
 		role="donate" title="Sign up and donate" 

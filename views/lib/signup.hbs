@@ -5,9 +5,12 @@
 	aria-hidden="true" 
 	style="display: none;"
 >
-	<h1 class="v-center">
-		{{ title }}
-	</h1>
+	<div class="modal-header">
+		{{> close-button }}
+		<h1 class="v-center">
+			{{ title }}
+		</h1>
+	</div>
 	<div class="modal-dialog">
 		{{> signup-common }}		
 	</div>

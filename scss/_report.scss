@@ -1,5 +1,15 @@
-.form-control {
-	border-radius: 10px;
+.report-link {
+	color: #c30;
+}
+
+.report, .signup, .login {
+	width: 780px !important;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	button {
+		margin-bottom: 3px;
+	}
 }
 
 .report {
