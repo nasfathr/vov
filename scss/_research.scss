@@ -1,4 +1,10 @@
 .research {
+	header {
+		color: #333333;
+		a {
+			color: #333333;
+		}
+	}
 
 	.bc-btn-default{
 	@include bc-button(5px 26px, $bc-gray, $font-size-base + 1, transparent, 50px);
